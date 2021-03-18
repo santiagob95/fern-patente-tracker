@@ -1,3 +1,4 @@
+import { Button } from '@material-ui/core';
 import React, {useState} from 'react'
 import ProgressBar from './ProgressBar';
 
@@ -24,7 +25,9 @@ const UploadForm = () =>{
     }
     return ( 
         <form>
+            <input type="text"/>
             <input type="file" onChange={changeHandler}/>
+            <Button onClick={changeHandler}/>
             <div className= "output">
                 {error && <div className="error">{error}</div>}
                 {file && <div>{file.name}</div>}
